@@ -43,6 +43,7 @@ export const careerItems = [
     company: { name: "Hipporello", url: "https://hipporello.com" },
     location: "Remote",
     description: "Leading the development of Hipporello Apps, a cutting-edge No-Code Trello Power-Up builder using React, and spearheading the development of Hipporello Service Desk, a standalone business management system that's revolutionizing how teams work.",
+    subRoles: []
   },
   {
     from: 2019,
@@ -51,6 +52,7 @@ export const careerItems = [
     company: { name: "Bigdata Teknoloji A.Ş.", url: null },
     location: "Istanbul, Turkey",
     description: "Designed and developed user interface structure of an AI-powered frontend application using React. Also developed IToken, a blockchain-based mobile application, and similar mobile apps using Ionic framework.",
+    subRoles: []
   },
   {
     from: 2018,
@@ -59,6 +61,7 @@ export const careerItems = [
     company: { name: "Akinon", url: "https://akinon.com/https://akinon.com" },
     location: "Istanbul, Turkey",
     description: "Developed and maintained frontend for multiple high-profile e-commerce brands.",
+    subRoles: []
   },
   {
     from: 2017,
@@ -67,6 +70,7 @@ export const careerItems = [
     company: { name: "taze", url: "https://tazebt.com" },
     location: "Istanbul, Turkey",
     description: "Turkish Airlines, Pegasus, Gratis, Gratis IK, Vakıfbank, QNB Finansbank, Garanti, Koç Üniversitesi, KoçKariyerim, Özdilekteyim, Koçfinans, WWF, Sabancı Üniversitesi, YGA İnovasyon, Avansas, Cam Ocağı(16.Altın Örümcek: Eğitim Dalında En iyi Web Sitesi)",
+    subRoles: []
   },
 ];
 

@@ -1,6 +1,9 @@
 import type { careerItems } from "@/lib/utils";
 
-export function CareerCard({ item }: { item: (typeof careerItems)[number] }) {
+type CareerItem = (typeof careerItems)[number];
+type SubRole = Pick<CareerItem, 'location' | 'from' | 'to' | 'title' | 'description'>;
+
+export function CareerCard({ item }: { item: CareerItem }) {
   return (
     <div className="overflow-hidden rounded-3xl shadow-[rgba(0,_0,_0,_0.15)_0px_20px_40px_-12px] bg-card/20 p-6 ring-2 hover:ring-3 ring-zinc-900/5 dark:ring-zinc-800 transition-all duration-500 hover:ring-zinc-600/20 dark:hover:ring-zinc-700">
       <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
@@ -19,12 +22,12 @@ export function CareerCard({ item }: { item: (typeof careerItems)[number] }) {
         {item.description}
       </div>
 
-      {item.subRoles?.length && (
+      {item.subRoles?.length > 0 && (
         <blockquote className="mt-5 text-sm text-muted-foreground border-l-[3px] border-border/70 rounded-l-lg pl-4">
-          {item.subRoles.map((role, index) => (
+          {item.subRoles.map((role: SubRole, index) => (
             <div key={`role-${index}`}>
               <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
-                <span>{role.location}</span>{" "}
+                <span>{role?.location}</span>{" "}
                 <span>
                   {role.from} — {role.to || "Present"}
                 </span>
