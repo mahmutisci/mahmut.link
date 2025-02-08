@@ -97,7 +97,7 @@ export default async function Home() {
           Here are some more projects that I have worked on. You can find the
           complete list of projects on my{" "}
           <a
-            href="https://github.com/needim"
+            href="https://github.com/mahmutisci"
             className="font-semibold transition-colors"
             target="_blank"
             rel="noreferrer"

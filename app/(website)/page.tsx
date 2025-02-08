@@ -64,14 +64,14 @@ export default async function Readme() {
         </div>
         <div className="mt-6 flex gap-6">
           <SocialLink
-            href="https://x.com/needim"
+            href="https://x.com/mahmutisci7"
             aria-label="Follow on X"
             count={xResponse.data?.public_metrics?.followers_count}
             label="followers"
             icon={XIcon}
           />
           <SocialLink
-            href="https://github.com/needim"
+            href="https://github.com/mahmutisci"
             aria-label="Follow on GitHub"
             icon={GitHubIcon}
             count={githubFollowers}
