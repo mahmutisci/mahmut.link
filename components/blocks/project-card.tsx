@@ -41,7 +41,7 @@ export function ProjectCard({
           debug && "debug"
         )}
       >
-        <div className="size-10 origin-top-left pt-3 duration-500 group-hover:scale-75 group-hover:pt-0">
+        <div className="size-12 origin-top-left duration-500 group-hover:scale-75 group-hover:pt-0">
           {Icon}
         </div>
         <div className="flex flex-col text-base transition-transform duration-500 group-hover:-translate-y-6">

@@ -10,6 +10,7 @@ import { careerItems } from "@/lib/utils";
 import { getGithubInfo, getXInfo } from "@/server/thirdparty";
 import type { Metadata } from "next";
 import Link from "next/link";
+import lightbox from "@/components/icons/image-lightbox-gallery.png";
 
 const currentYear = new Date().getFullYear();
 const lastPosition = currentYear - careerItems[careerItems.length - 1].from;
@@ -56,10 +57,13 @@ export default async function Readme() {
             >
               @Hipporello
             </Link>
-            , a company that builds business management tools for trello and notion.
+            , a company that builds business management tools for trello and
+            notion.
           </p>
           <p>
-            At Hipporello, I craft and refine front-end solutions, ensuring their effectiveness while constantly exploring ways to enhance and elevate the experience.
+            At Hipporello, I craft and refine front-end solutions, ensuring
+            their effectiveness while constantly exploring ways to enhance and
+            elevate the experience.
           </p>
         </div>
         <div className="mt-6 flex gap-6">
@@ -84,12 +88,18 @@ export default async function Readme() {
         <p className="text-muted-foreground mb-8 mt-3">
           Most recent projects and contributions.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <ProjectCard
             title="Type Foundry"
-            icon={<FramerLogo className="size-10" />}
+            icon={<FramerLogo className="size-12 pt-2" />}
             description="Framer template for type designers"
             link="https://typefoundry.framer.website"
+          />
+          <ProjectCard
+            title="Image Lightbox Gallery"
+            icon={<img src={lightbox.src} className="size-12" />}
+            description="Image Lightbox Gallery – Simple & Responsive Lightbox for Framer"
+            link="https://image-lightbox-gallery.framer.website/"
           />
         </div>
       </Container>
