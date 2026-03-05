@@ -145,7 +145,15 @@ export const getGithubInfo = cache(
         next: { revalidate: CACHE_DURATION },
       });
 
-      return await res.json();
+      const json = await res.json();
+
+      // Validate response structure - API may return error JSON without throwing
+      if (!json?.data?.viewer) {
+        console.warn("github api returned unexpected response", json);
+        return DEFAULT_GITHUB_RESPONSE;
+      }
+
+      return json;
     } catch (error) {
       console.error("github api error", error);
       return DEFAULT_GITHUB_RESPONSE;
