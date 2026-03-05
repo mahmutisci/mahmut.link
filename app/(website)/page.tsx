@@ -1,7 +1,7 @@
 import { CareerCard } from "@/components/blocks/career-card";
 import { Container } from "@/components/blocks/container";
 import FramerLogo from "@/components/blocks/framer-logo";
-import GiderimLogo from "@/components/blocks/giderim-logo";
+import GoogleMapLogo from "@/components/blocks/google-logo";
 import { OpenSourceCard } from "@/components/blocks/opensource-card";
 import { ProjectCard } from "@/components/blocks/project-card";
 import { GitHubIcon, XIcon } from "@/components/blocks/social-icons";
@@ -11,6 +11,7 @@ import { getGithubInfo, getXInfo } from "@/server/thirdparty";
 import type { Metadata } from "next";
 import Link from "next/link";
 import lightbox from "@/components/icons/image-lightbox-gallery.png";
+import temizLogo from "@/components/icons/temiz-logo.png";
 
 const currentYear = new Date().getFullYear();
 const lastPosition = currentYear - careerItems[careerItems.length - 1].from;
@@ -100,6 +101,18 @@ export default async function Readme() {
             icon={<img src={lightbox.src} className="size-12" />}
             description="Image Lightbox Gallery – Simple & Responsive Lightbox for Framer"
             link="https://image-lightbox-gallery.framer.website/"
+          />
+          <ProjectCard
+            title="Temiz.co App"
+            icon={<img src={temizLogo.src} className="max-w-40 mt-2 w-auto" />}
+            description="IOS and Android App with React Native and Expo"
+            link="https://temiz.co"
+          />
+          <ProjectCard
+            title="Advanced Google Map"
+            icon={<GoogleMapLogo className="size-14 -ml-2" />}
+            description="Advanced Google Map for Framer with CMS integtation, List & Themes"
+            link="https://store.pin.supply/checkout/buy/b4717890-cd9a-4351-970d-1e018fe16116"
           />
         </div>
       </Container>
